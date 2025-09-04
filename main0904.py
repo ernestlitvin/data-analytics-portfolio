@@ -99,10 +99,11 @@ print()
     # if mot_answer.lower() == "yes":
     #     has_motivation_letter = True
     #
-    # or even: if mot_answer.lower() == "yes":
-#     has_motivation_letter = True
-# else:
-#     has_motivation_letter = False
+    #
+# or even: if mot_answer.lower() == "yes":
+#               has_motivation_letter = True
+#          else:
+#               has_motivation_letter = False
 
 # if rating >= 85 and (has_motivation_letter or orating > 7):
 #     print("Accepted")
@@ -138,60 +139,57 @@ print()
 price = int(10)
 
 age = int(input("How old are you? "))
-day = input("What day is today ? mon/tue/wed/thu/fri/sat/sun ?")
-# threed = input("Is film in 3D ? yes/no")
+day = input("What day is today ? mon/tue/wed/thu/fri/sat/sun ?").lower()
+threed = input("Is film in 3D ? yes/no").lower()
 
-# is_three_d = False
-# if threed == "yes":
-#     is_three_d = True
+has_threed = False
+if threed == "yes":
+    has_threed = True
 
 if age < 12:
     price *= 0.5
-    if day == "tue":
-        price = price - 2
-        print(f"You have a discount due to day of a day and age (<12). Ticket price is {price}")
-    else:
-        print(f"You have a discount due to age (<12). Your ticket price is {price}")
-elif age > 12 and age < 65:
-    if day == "tue":
-        price = price - 2
-        print(f"You have a discount due to day. Ticket price is {price}")
-    else:
-        print(f"Ticket has regular price - {price}")
 elif age >= 65:
-    price *= 0.7
-    if day == "tue":
-        price = price - 2
-        print(f"You have a discount due to day of a day and age (>=65). Ticket price is {price}")
-    else:
-        print(f"You have a discount due to age (>=65). Your ticket price is {price}")
-else:
-    print(f"Ticket has regular price - {price}")
+    price *= 0.70
 
+if day == "tue":
+    price -= 2
 
+if has_threed:
+    price += 3
 
+print(f"The final ticket price is: {price}")
 
-
-#
+# working app with age and day
+# if age < 12:
+#     price *= 0.5
+#     if day == "tue":
+#         price = price - 2
+#         print(f"You have a discount due to day of a day and age (<12). Ticket price is {price}")
+#     else:
+#         print(f"You have a discount due to age (<12). Your ticket price is {price}")
+# elif age > 12 and age < 65:
+#     if day == "tue":
+#         price = price - 2
+#         print(f"You have a discount due to day. Ticket price is {price}")
+#     else:
+#         print(f"Ticket has regular price - {price}")
 # elif age >= 65:
 #     price *= 0.7
 #     if day == "tue":
 #         price = price - 2
-#         print(f"You have a discount. Ticket price is {price}")
+#         print(f"You have a discount due to day of a day and age (>=65). Ticket price is {price}")
 #     else:
-#         print(f"Ticket price is {price}")
+#         print(f"You have a discount due to age (>=65). Your ticket price is {price}")
 # else:
-#     print(f"Ticket price is {price}")
+#     print(f"Ticket has regular price - {price}")
 
-# working app with age
-# if age < 12:
-#     price *= 0.5
-#     print(f"You have a discount. Ticket price is {price}")
-# elif age >= 65:
-#     price *= 0.7
-#     print(f"You have a discount. Ticket price is {price}")
-# else:
-#     print(f"Ticket price is {price}")
+
+
+
+
+
+
+
 
 
 
