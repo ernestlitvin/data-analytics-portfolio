@@ -119,7 +119,7 @@ print()
 #
 # if action == "deposit":
 #     deposit_amount = int(input("How much do you want to deposit: "))
-#     balance = balance + deposit_amount
+#     balance += deposit_amount
 #     print(f"Action done. Your balance is {balance} ")
 # elif action == "withdraw":
 #     withdraw_amount = int(input("How much do you want to withdraw: "))
@@ -134,3 +134,73 @@ print()
 #     print(balance)
 # else:
 #     print("Invalid action")
+
+price = int(10)
+
+age = int(input("How old are you? "))
+day = input("What day is today ? mon/tue/wed/thu/fri/sat/sun ?")
+# threed = input("Is film in 3D ? yes/no")
+
+# is_three_d = False
+# if threed == "yes":
+#     is_three_d = True
+
+if age < 12:
+    price *= 0.5
+    if day == "tue":
+        price = price - 2
+        print(f"You have a discount due to day of a day and age (<12). Ticket price is {price}")
+    else:
+        print(f"You have a discount due to age (<12). Your ticket price is {price}")
+elif age > 12 and age < 65:
+    if day == "tue":
+        price = price - 2
+        print(f"You have a discount due to day. Ticket price is {price}")
+    else:
+        print(f"Ticket has regular price - {price}")
+elif age >= 65:
+    price *= 0.7
+    if day == "tue":
+        price = price - 2
+        print(f"You have a discount due to day of a day and age (>=65). Ticket price is {price}")
+    else:
+        print(f"You have a discount due to age (>=65). Your ticket price is {price}")
+else:
+    print(f"Ticket has regular price - {price}")
+
+
+
+
+
+#
+# elif age >= 65:
+#     price *= 0.7
+#     if day == "tue":
+#         price = price - 2
+#         print(f"You have a discount. Ticket price is {price}")
+#     else:
+#         print(f"Ticket price is {price}")
+# else:
+#     print(f"Ticket price is {price}")
+
+# working app with age
+# if age < 12:
+#     price *= 0.5
+#     print(f"You have a discount. Ticket price is {price}")
+# elif age >= 65:
+#     price *= 0.7
+#     print(f"You have a discount. Ticket price is {price}")
+# else:
+#     print(f"Ticket price is {price}")
+
+
+
+
+
+
+
+
+
+
+
+
