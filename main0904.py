@@ -184,8 +184,7 @@ print(f"The final ticket price is: {price}")
 #     print(f"Ticket has regular price - {price}")
 
 
-
-
+#asd
 
 
 
