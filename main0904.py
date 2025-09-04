@@ -109,3 +109,28 @@ print()
 # else:
 #     print("Rejected")
 
+print()
+##ATM##
+
+# balance = int(1000)
+#
+# print(f"Your balance is {balance}")
+# action = input("What action do you want to do: deposit/withdraw/balance ? ")
+#
+# if action == "deposit":
+#     deposit_amount = int(input("How much do you want to deposit: "))
+#     balance = balance + deposit_amount
+#     print(f"Action done. Your balance is {balance} ")
+# elif action == "withdraw":
+#     withdraw_amount = int(input("How much do you want to withdraw: "))
+#     if withdraw_amount > balance:
+#         print("You don't have enough money")
+#     elif withdraw_amount < 0:
+#         print("Wrong amount")
+#     else:
+#         balance = balance - withdraw_amount
+#         print(f"Action done. Your balance is {balance}")
+# elif action == "balance":
+#     print(balance)
+# else:
+#     print("Invalid action")
