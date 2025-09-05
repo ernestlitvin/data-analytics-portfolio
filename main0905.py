@@ -100,9 +100,9 @@ print("_____")
 # Sukurkite tris kintamuosius ir naudodamiesi funkcija random.randint(x,x) jiems priskirkite atsitiktines reikšmes nuo 0 iki 25.
 # Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę.
 
-a = random.randint(0,3)
-b = random.randint(0,3)
-c = random.randint(0,3)
+a = random.randint(0,25)
+b = random.randint(0,25)
+c = random.randint(0,25)
 print(a, b, c)
 
 if b <= a <= c or c <= a <= b:
@@ -124,3 +124,35 @@ else:
 #     print(a)
 # elif c <= b <= a:
 #     print(b)
+
+# Įvedami skaičiai - a, b, c –kraštinių ilgiai, trys kintamieji (naudokite random.randint(x,x) funkciją nuo 1 iki 10).
+# Parašykite Python programą, kuri nustatytų, ar galima sudaryti trikampį ir atsakymą atspausdintų.
+
+print()
+######
+print("_____")
+
+a = random.randint(1,10)
+b = random.randint(1,10)
+c = random.randint(1,10)
+
+print(f"a - {a}, b - {b}, c - {c}")
+
+# if a+b>c and a+c>b and b+c>a:
+#     print("Triangle is correct")
+# else:
+#     print("Triangle is incorrect")
+
+## or
+# longest_side = max(a, b, c)
+# total_sides_sum = a + b + c
+# shorts_sides_sum = total_sides_sum - longest_side
+# if shorts_sides_sum > longest_side:
+#     print("Triangle is correct")
+# else:
+#     print("Triangle is incorrect")
+
+
+
+
+
