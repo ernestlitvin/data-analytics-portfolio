@@ -27,6 +27,7 @@
 # print("Shipping cost: ", float(shipping_cost))
 # print("-----------------")
 # print("Total price is: ", float(subtotal + shipping_cost - member_discount - discount))
+import random
 
 #####
 numbers = [-12, -5, 1, 505, 1403, 22042, 1235334]
@@ -82,15 +83,44 @@ print("_____")
 
 print("_____")
 ### alternative way
-vowel_count = 0
-text = input("Please tell something").lower()
-vowel = "aeiou"
+# vowel_count = 0
+# text = input("Please tell something").lower()
+# vowel = "aeiou"
+#
+#
+# for letters in text:
+#     if letters in vowel:
+#         vowel_count += 1
+#
+# print(f"Found {vowel_count} vowels in -{text}-")
+print()
+######
+print("_____")
 
+# Sukurkite tris kintamuosius ir naudodamiesi funkcija random.randint(x,x) jiems priskirkite atsitiktines reikšmes nuo 0 iki 25.
+# Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę.
 
-for letters in text:
-    if letters in vowel:
-        vowel_count += 1
+a = random.randint(0,3)
+b = random.randint(0,3)
+c = random.randint(0,3)
+print(a, b, c)
 
-print(f"Found {vowel_count} vowels in -{text}-")
+if b <= a <= c or c <= a <= b:
+    print(a)
+elif a <= b <= c or c <= b <=a:
+    print(b)
+else:
+    print(c)
 
-
+# if a <= b <= c:
+#     print(b)
+# elif b <= c <= a:
+#     print(c)
+# elif c <= a <= b:
+#     print(a)
+# elif a <= c <= b:
+#     print(c)
+# elif b <= a <= c:
+#     print(a)
+# elif c <= b <= a:
+#     print(b)
