@@ -58,8 +58,7 @@ print(f"Zeros count - {zeros}, Ones count - {ones}, Twos count - {twos}")
 # count_numbers_2 = numbers.count(2)
 # print(f"Zeros count {count_numbers_0}. Ones count {count_numbers_1}. Twos count {count_numbers_2}")
 
-
-#alternative way with cycle
+#alternative way with for
 # a = random.randint(0,2)
 # b = random.randint(0,2)
 # c = random.randint(0,2)
@@ -77,7 +76,46 @@ print(f"Zeros count - {zeros}, Ones count - {ones}, Twos count - {twos}")
 #         twos += 1
 # print(f"Zero_count {zeros}, Ones_count {ones}, Twos_count {twos}")
 
+# Naudokite funkcija random.randint(x,x). Sukurkite ir atspausdinkite 3 skaičius nuo -10 iki 10.
+# Skaičiai mažesni už 0 turi būti  laužtiniuose skliaustuose [], 0 -  (), didesni už 0 {}.   [-4],  (0)
+print("-------------")
+print()
+print()
+x = random.randint(-10,10)
+y = random.randint(-10,10)
+z = random.randint(-10,10)
+print(x, y, z)
 
+if -10 <= x < 0:
+    print(f"[{x}]")
+elif 0 < x <= 10:
+    print(f"{{{x}}}")
+else:
+    print(f"({x})")
 
+if -10 <= y < 0:
+    print(f"[{y}]")
+elif 0 < y <= 10:
+    print(f"{{{y}}}")
+else:
+    print(f"({y})")
+
+if -10 <= z < 0:
+    print(f"[{z}]")
+elif 0 < z <= 10:
+    print(f"{{z}}")
+else:
+    print(f"({z})")
+
+## alternative way with for
+
+# numbers = [x,y,z]
+# for num in numbers:
+#     if -10 <= num < 0:
+#         print(f"[{num}]")
+#     elif 0 < num <= 10:
+#         print(f"{{{num}}}")
+#     else:
+#         print(f"({num})")
 
 
