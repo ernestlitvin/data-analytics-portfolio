@@ -145,5 +145,30 @@ print()
 # Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90.
 # Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
 
+x = random.randint(0,100)
+y = random.randint(0,100)
+z = random.randint(0,100)
 
+print(x, y, z)
 
+filtered_sum = 0
+filtered_count = 0
+
+if x > 10 and x < 90:
+    filtered_sum += x
+    filtered_count += 1
+if y > 10 and y < 90:
+    filtered_sum += y
+    filtered_count += 1
+if z > 10 and z < 90:
+    filtered_sum += z
+    filtered_count += 1
+
+print(f"Filtered sum - {filtered_sum}")
+print(f"Filtered count - {filtered_count}")
+
+print(f"Average_1 is - {round((x + y + z) / 3,0)}")
+if filtered_count == 0:
+    print(f"Average_2 not available - No numbers")
+else:
+    print(f"Average_2 is - {round(filtered_sum / filtered_count,0)}")
