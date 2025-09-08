@@ -118,4 +118,32 @@ else:
 #     else:
 #         print(f"({num})")
 
+# Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip 1000 vienetų taikoma 3 % nuolaida, daugiau kaip 2000 vienetų- 4 % nuolaida.
+# Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama.
+# Žvakių kiekį generuokite random.randint(x,x) funkcija nuo 5 iki 3000.
+print("-------------")
+print()
+print()
+
+x = random.randint(5,3000)
+print(x)
+candle_price = 1
+sum_can = 0
+
+if x > 2000:
+    sum_can = (x * candle_price * 0.96)
+elif x > 1000:
+    sum_can = (x * candle_price * 0.97)
+else:
+    sum_can = x * candle_price
+print(f"Candle amount - {x}. Total price of candles - {round(sum_can,2)} EUR")
+print("-------------")
+print()
+print()
+
+# Naudokite funkcija random.randint(x,x). Sukurkite tris kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100.
+# Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90.
+# Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
+
+
 
