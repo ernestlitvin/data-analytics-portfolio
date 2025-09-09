@@ -170,4 +170,12 @@ import string
 letters = "".join(random.choices(string.ascii_lowercase, k = 3))
 print(letters)
 
+print()
+print("------")
+####
+
+login = input("What is your name ?")
+surname = input("What is your surname ?")
+print(login[0:3].lower() + surname[0:3].lower())
+print(login[0].lower() + surname.lower())
 
