@@ -96,3 +96,29 @@ print(newstarWars[3])
 # Pakartokite kodą su stringu "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale"
 
 sent = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
+
+
+
+
+
+# sent = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
+#newsent = sent.split() ## --> alternative way
+#print(newsent)
+# print(len(newsent))
+# short = 0
+# for letters in newsent:
+#     if len(letters) <= 5:
+#         short += 1
+# print(short)
+#
+# print("-----")
+# sent2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale"
+# newsent2 = sent2.split()
+# print(newsent2)
+# print(len(newsent2))
+# short2 = 0
+#
+# for letters in newsent2:
+#     if len(letters) <= 5:
+#         short2 += 1
+# print(short2)
