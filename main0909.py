@@ -163,3 +163,11 @@ for letters in newsent2:
         short2 += 1
 print(short2)
 
+# Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+print()
+print("-----")
+import string
+letters = "".join(random.choices(string.ascii_lowercase, k = 3))
+print(letters)
+
+
