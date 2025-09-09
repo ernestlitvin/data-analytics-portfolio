@@ -52,3 +52,28 @@ surname = "Radcliffe"
 letters = name[-3:] + surname[-3:]
 print(letters)
 
+# Sukurti kintamąjį su stringu: "An American in Paris".
+# Jame vis`as “a” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti.
+sent = "An American in Paris"
+new_sent = sent.replace("a","A")
+new_sent2 = new_sent.replace("A","*")
+print(new_sent)
+print(new_sent2)
+
+new_sent = sent.replace('a', '*').replace('A', '*') ## alternative way
+
+
+# Sukurti kintamąjį su stringu: "An American in Paris".
+# Jame ištrinti visas balses.
+# Rezultatą atspausdinti.
+# Kodą pakartoti su stringais: "Breakfast at Tiffany's", "2001: A Space Odyssey" ir "It's a Wonderful Life".
+
+sent1 = "An American in Paris"
+sent = sent1.lower()
+new_sent1 = sent.replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
+print(new_sent1)
+
+sent2 = "Breakfast at Tiffany's"
+sent = sent2.lower()
+new_sent2 = sent.replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
+print(new_sent2)
