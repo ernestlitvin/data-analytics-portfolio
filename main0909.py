@@ -22,26 +22,33 @@ for number in mas:
 # Atspausdinti trumpesnį stringą.
 print()
 print("_____")
-name = "Jonas"
-surname = "Jonaitis"
+name = "Daniel"
+surname = "Radcliffe"
 
 shortest = min(name,surname,key=len)
 print(shortest)
 
 # Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
 # Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms. (LEONARDO dicaprio)
-name = "Jonas"
-surname = "Jonaitis"
+name = "Daniel"
+surname = "Radcliffe"
 print(name.upper(),surname.lower())
 
 # Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
 # Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo ir pavardės kintamųjų reikšmių raidžių.
 # Jį atspausdinti.
 
-name = "Jonas"
-surname = "Jonaitis"
+name = "Daniel"
+surname = "Radcliffe"
 letters = name[0] + surname[0]
 print(letters)
 
+# Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.
+# Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių.
+# Jį atspausdinti.
 
+name = "Daniel"
+surname = "Radcliffe"
+letters = name[-3:] + surname[-3:]
+print(letters)
 
