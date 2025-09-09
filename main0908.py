@@ -172,3 +172,69 @@ if filtered_count == 0:
     print(f"Average_2 not available - No numbers")
 else:
     print(f"Average_2 is - {round(filtered_sum / filtered_count,0)}")
+
+print("-------------")
+print()
+print()
+# Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes.
+# Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją random.randint(x,x).
+# Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko.
+# Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
+
+sec = random.randint(0,59)
+min = random.randint(0,59)
+hour = random.randint(0,23)
+add = random.randint(0,300)
+print(hour,min,sec)
+
+print(f"Random time is {hour}:{min}:{sec}")
+
+min_to_sec = min * 60
+hour_to_min_to_sec = hour * 60 * 60
+all_sec = sec + min_to_sec + hour_to_min_to_sec
+
+print(f"Random time convereted to seconds - {all_sec} ")
+print("------")
+print(f"Additional seconds - {add}")
+rnd_time_and_add_secs = all_sec + add
+print(f"Randome time seconds + additional time - {rnd_time_and_add_secs}")
+print("------")
+
+back_time_hours = rnd_time_and_add_secs // 3600
+print(f"New hour(s) - {back_time_hours}")
+
+seconds_left_new = rnd_time_and_add_secs % 3600
+print(f"New all seconds left - {seconds_left_new}")
+
+print("------")
+back_time_minutes = seconds_left_new // 60
+print(f"New minute(s) - {back_time_minutes}")
+back_time_seconds = seconds_left_new % 60
+print(f"New second(s) - {back_time_seconds}")
+
+print("------")
+print(f"New random time is - {back_time_hours}:{back_time_minutes}:{back_time_seconds}")
+
+if back_time_hours < 10:
+    hours_str = f"0{back_time_hours}"
+else:
+    hours_str = str(back_time_hours)
+
+if back_time_minutes < 10:
+    minutes_str = f"0{back_time_minutes}"
+else:
+    minutes_str = str(back_time_minutes)
+
+if back_time_seconds < 10:
+    seconds_str = f"0{back_time_seconds}"
+else:
+    seconds_str = str(back_time_seconds)
+
+final_time = f"{hours_str}:{minutes_str}:{seconds_str}"
+print(f"New formatted time - {final_time}")
+
+print("%02d:%02d:%02d" % (back_time_hours,back_time_minutes,back_time_seconds)) ## -> alternative way
+print(f"{back_time_hours:02d}:{back_time_minutes:02d}:{back_time_seconds:02d}") ## -> best formatted way
+
+
+
