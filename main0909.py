@@ -66,14 +66,33 @@ new_sent = sent.replace('a', '*').replace('A', '*') ## alternative way
 # Sukurti kintamąjį su stringu: "An American in Paris".
 # Jame ištrinti visas balses.
 # Rezultatą atspausdinti.
-# Kodą pakartoti su stringais: "Breakfast at Tiffany's", "2001: A Space Odyssey" ir "It's a Wonderful Life".
+# Kodą pakartoti su stringais: "Breakfast at Tiffany's"
 
 sent1 = "An American in Paris"
 sent = sent1.lower()
 new_sent1 = sent.replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
 print(new_sent1)
-
 sent2 = "Breakfast at Tiffany's"
 sent = sent2.lower()
 new_sent2 = sent.replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
 print(new_sent2)
+
+# Stringe, kurį generuoja toks kodas:
+# starWars = "Star Wars: Episode " + (" " * random.randint(1, 9)) + str(random.randint(1, 7)) + " - A New Hope"
+# Surasti ir atspausdinti epizodo numerį.
+
+starWars = "Star Wars: Episode " + (" " * random.randint(1, 9)) + str(random.randint(1, 7)) + " - A New Hope"
+print(starWars)
+
+episode_nr = starWars[-14] # good, but not perfect
+print(episode_nr)
+
+newstarWars = starWars.split() # the best
+print(newstarWars)
+print(newstarWars[3])
+
+# Suskaičiuoti kiek stringe "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
+# yra žodžių trumpesnių arba lygių nei 5 raidės.
+# Pakartokite kodą su stringu "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale"
+
+sent = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
