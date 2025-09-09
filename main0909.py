@@ -174,8 +174,29 @@ print()
 print("------")
 ####
 
-login = input("What is your name ?")
-surname = input("What is your surname ?")
-print(login[0:3].lower() + surname[0:3].lower())
-print(login[0].lower() + surname.lower())
+# login = input("What is your name ?")
+# surname = input("What is your surname ?")
+# print(login[0:3].lower() + surname[0:3].lower())
+# print(login[0].lower() + surname.lower())
+
+()
+print("------")
+####
+
+for i in range(1,31):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+
+
+
+
+
+
 
