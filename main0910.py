@@ -48,19 +48,19 @@ for i in range(0,10):
 
 # Sukurkite masyvą iš dešimties augalų pavadinimų.
 
-list = ["azuolas", "pusis", "berzas", "egle", "liepa", "klevas", "saulegraza", "ramune", "roze", "tulpe"]
+plants = ["azuolas", "pusis", "berzas", "egle", "liepa", "klevas", "saulegraza", "ramune", "roze", "tulpe"]
 
 # Atspausdinkite kiekvieną 3čio uždavinio augalą atskiroje eilutėje.
 
-for i in range(10):
-    print(list[i])
+for plant in plants:
+    print(plant)
 
 print()
 print("-----")
 
 # Atspausdinkite 3čio uždavinio kiekvieną augalą pradedant nuo paskutinio, ir baigiant pirmuoju. (atvirkščias ciklas).
-for i in reversed(range(10)):
-    print(list[i])
+for plant in reversed(plants):
+    print(plant)
 
 print()
 print("-----")
@@ -88,8 +88,40 @@ count_even = 0
 
 for i in range(0,20):
     if i % 2 == 0:
-        continue
         count_even += 1
-    print(i)
-    print(count_even)
 
+print(f"Number of evens is - {count_even}")
+print()
+print("-----")
+# Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių trumpesnių nei 5 simboliai, ir kiek ilgesnių nei 7 simboliai. (du skaičiavimai)
+plants = ["azuolas", "pusis", "berzas", "egle", "liepa", "klevas", "saulegraza", "ramune", "roze", "tulpe"]
+
+min5 = 0
+max7 = 0
+
+for i in plants:
+    if len(i) < 5:
+        min5 += 1
+    elif len(i) > 7:
+        max7 += 1
+
+print(min5)
+print(max7)
+
+# Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai.
+# (tarp 5 ir 10 simbolių ilgio)
+
+print()
+print("-----")
+mid = 0
+
+for i in plants:
+    if len(i) > 5 and len(i) < 10:
+        mid += 1
+print(mid)
+
+## alternative way
+# for i in list:
+#     if 5 < len(i) < 10:
+#         mid += 1
+# print(mid)
