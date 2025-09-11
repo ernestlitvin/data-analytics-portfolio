@@ -50,14 +50,13 @@ for nr in range(1,3001):
         nums.append(nr)
 
 print(nums)
+print(", ".join(str(x) for x in nums)) ## best solution
 
+print()
 print("-------")
 
-results = []
-for numbers in range(1,3001):
-    if numbers % 77 == 0:
-        results.append(numbers)
-print(", ".join(str(x) for x in results))
+
+
 
 
 
