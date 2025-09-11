@@ -1,6 +1,7 @@
 # Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite
 # kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
 import random
+from html.parser import interesting_normal
 
 print()
 print("-----")
@@ -57,8 +58,17 @@ print("-------")
 
 # Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
 
-for _ in range(5):
-    print("* "*5)
+# for _ in range(5):
+#     print("* "*5)
+
+for row in range(5):
+    for col in range(5):
+        print("* ", end=" ")
+    print()
+
+
+
+
 
 # Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
 
