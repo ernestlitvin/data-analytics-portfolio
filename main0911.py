@@ -130,20 +130,19 @@ while True:
             break
 
 # Tris kartus iš eilės iškritus herbui;
-count_herb = 0
 count_nr = 0
 const_herb = 0
 
 while True:
     num = random.randint(0, 1)
     if num == 1:
+        const_herb = 0
         print("N", end = " ")
     elif num == 0:
-        count_herb += 1
+        const_herb += 1
         print("H", end = " ")
-        if count_herb == 3:
+        if const_herb == 3:
             break
-        elif count_herb == 3:
-            break
+
 
 
