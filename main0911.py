@@ -55,6 +55,13 @@ print(", ".join(str(x) for x in nums)) ## best solution
 print()
 print("-------")
 
+# Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
+
+for _ in range(5):
+    print("* "*5)
+
+# Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
+
 
 
 
