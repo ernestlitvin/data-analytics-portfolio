@@ -1,7 +1,6 @@
 # Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite
 # kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
 import random
-from html.parser import interesting_normal
 
 print()
 print("-----")
@@ -83,9 +82,68 @@ for x in range(5):
             print("* ", end=" ")
     print()
 
+print("-------")
+print()
+# Metam monetą. Monetos kritimo rezultatą imituojam random.randint(x,x) funkcija, kur 0 yra herbas, o 1 - skaičius.
+# Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+# Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+# Iškritus herbui;
+# Tris kartus iškritus herbui;
+# Tris kartus iš eilės iškritus herbui;
+count_herb = 0
+count_nr = 0
 
+# for _ in range(5):
+#     num = random.randint(0, 1)
+#     print(num, end=" ")
+#     if num == 0:
+#         count_herb += 1
+#     elif num == 1:
+#         count_nr += 1
+#
+# print()
+# print(f"Herb count - {count_herb}")
+# print(f"Number count - {count_nr}")
 
+# Iškritus herbui;
 
+while True:
+    num = random.randint(0, 1)
+    if num == 0:
+        print("H")
+        break
+    elif num == 1:
+        print("N")
+print("-----")
 
+# Tris kartus iškritus herbui;
+count_herb = 0
+count_nr = 0
+while True:
+    num = random.randint(0, 1)
+    if num == 1:
+        print("N", end = " ")
+    elif num == 0:
+        count_herb += 1
+        print("H", end = " ")
+        if count_herb == 3:
+            break
+
+# Tris kartus iš eilės iškritus herbui;
+count_herb = 0
+count_nr = 0
+const_herb = 0
+
+while True:
+    num = random.randint(0, 1)
+    if num == 1:
+        print("N", end = " ")
+    elif num == 0:
+        count_herb += 1
+        print("H", end = " ")
+        if count_herb == 3:
+            break
+        elif count_herb == 3:
+            break
 
 
