@@ -17,9 +17,31 @@ for _ in range(30):
 print(num)
 print(len(num))
 print(num[0])
+# for index, value in enumerate(num):
+#     print(f"Index: {index}, Number: {value}")
 
 # Naudodamiesi 1 uždavinio masyvu:
 # Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;
 print("------")
 print()
+count10 = 0
+for n in num:
+    if n > 10:
+        count10 += 1
+print(f"Numbers count, which are bigger then 10 - {count10}")
 
+# Raskite didžiausią masyvo reikšmę;
+print("------")
+print()
+maxi = max(num)
+print(maxi)
+
+# Suskaičiuokite visų reikšmių sumą;
+print("------")
+print()
+suma = sum(num)
+print(suma)
+
+# Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
+print("------")
+print()
