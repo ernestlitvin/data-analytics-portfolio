@@ -104,6 +104,11 @@ print()
 print("------")
 print()
 
+for index, values in enumerate(num):
+    if values > 10:
+        break
+print(num)
+print(index)
 
 
 
