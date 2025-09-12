@@ -17,8 +17,8 @@ for _ in range(30):
 print(num)
 print(len(num))
 print(num[0])
-# for index, value in enumerate(num):
-#     print(f"Index: {index}, Number: {value}")
+
+# num = [random.randint(5, 25) for _ in range(30)] ## alternative way
 
 # Naudodamiesi 1 uždavinio masyvu:
 # Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;
@@ -29,6 +29,8 @@ for n in num:
     if n > 10:
         count10 += 1
 print(f"Numbers count, which are bigger then 10 - {count10}")
+
+## count10 = sum(1 for n in num if n > 10) ## alternative way
 
 # Raskite didžiausią masyvo reikšmę;
 print("------")
@@ -45,9 +47,7 @@ print(suma)
 # Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
 print("------")
 print()
-# num = []
-# for _ in range(30):
-#     num.append(random.randint(5, 25))
+
 print(num)
 n_num = []
 
@@ -56,6 +56,8 @@ for index, values in enumerate(num):
     inval = values - index
     n_num.append(inval)
 print(n_num)
+
+## n_num = [value - index for index, value in enumerate(num)] ## alternative way
 
 # Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
 print("------")
@@ -67,6 +69,9 @@ for _ in range(10):
     num.append(random.randint(5, 25))
 print(num)
 print(len(num))
+
+## new_elements = [random.randint(5, 25) for _ in range(10)] ## alternative way
+## num += new_elements # or num.extend(new_elements)
 
 print("------")
 print()
@@ -83,6 +88,9 @@ for index, values in enumerate(num):
 print(even_in)
 print(odd_in)
 
+## even_in = num[::2]   # alternative way
+## odd_in = num[1::2]
+
 # Masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
 print()
 print("------")
@@ -98,6 +106,11 @@ for index, values in enumerate(num):
         null_num.append(values)
 print(num)
 print(null_num)
+
+# alternative way
+# for index in range(len(num)):
+#     if index % 2 == 0 and num[index] > 15:
+#         num[index] = 0
 
 # Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10;
 print()
