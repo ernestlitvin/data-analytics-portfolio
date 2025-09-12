@@ -142,3 +142,10 @@ print(f" Letter C count - {abcd.count("C")}")
 print(f" Letter D count - {abcd.count("D")}")
 
 # Išrūšiuokite 3 uždavinio masyvą pagal abecėlę.
+
+fixed = sorted(abcd)
+print(fixed)
+
+# Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes.
+# (turi gautis masyvas, kurio elementai, kaip pvz atrodo taip: “AAB”, “CBC”, “DDA”, 200 reikšmių).
+# Paskaičiuokite kiek skirtingų reikšmių kombinacijų gavote.
