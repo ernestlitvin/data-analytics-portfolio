@@ -149,3 +149,39 @@ print(fixed)
 # Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes.
 # (turi gautis masyvas, kurio elementai, kaip pvz atrodo taip: “AAB”, “CBC”, “DDA”, 200 reikšmių).
 # Paskaičiuokite kiek skirtingų reikšmių kombinacijų gavote.
+print()
+print("------")
+print()
+
+list1 = []
+list2 = []
+list3 = []
+final_list = []
+
+for _ in range(10):
+    let = random.choice(lol)
+    list1.append(let)
+print(list1)
+
+for _ in range(10):
+    let = random.choice(lol)
+    list2.append(let)
+print(list2)
+
+for _ in range(10):
+    let = random.choice(lol)
+    list3.append(let)
+print(list3)
+
+f = list1[0] + list2[0] + list3[0]
+print(f)
+
+for i in range(10):
+    indeks = list1[i] + list2[i] + list3[i]
+    final_list.append(indeks)
+print(final_list)
+
+
+
+
+
