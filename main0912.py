@@ -71,6 +71,18 @@ print(len(num))
 print("------")
 print()
 # Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indekso reikšmių, o kitas iš porinių;
+print(num)
+odd_in = []
+even_in = []
+
+for index, values in enumerate(num):
+    if index % 2 == 0:
+        even_in.append(values)
+    else:
+        odd_in.append(values)
+print(even_in)
+print(odd_in)
+
 
 
 
