@@ -83,6 +83,26 @@ for index, values in enumerate(num):
 print(even_in)
 print(odd_in)
 
+# Masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
+print()
+print("------")
+print()
+
+null_num = []
+
+for index, values in enumerate(num):
+    if index % 2 == 0 and values > 15:
+        values = 0
+        null_num.append(values)
+    else:
+        null_num.append(values)
+print(num)
+print(null_num)
+
+# Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10;
+print()
+print("------")
+print()
 
 
 
