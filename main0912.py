@@ -123,5 +123,22 @@ for index, values in enumerate(num):
 print(num)
 print(index)
 
+# Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
+print()
+print("------")
+print()
 
+abcd = []
+lol = ["A","B","C","D"]
 
+for _ in range(20):
+    let = random.choice(lol)
+    abcd.append(let)
+print(abcd)
+
+print(f" Letter A count - {abcd.count("A")}")
+print(f" Letter B count - {abcd.count("B")}")
+print(f" Letter C count - {abcd.count("C")}")
+print(f" Letter D count - {abcd.count("D")}")
+
+# Išrūšiuokite 3 uždavinio masyvą pagal abecėlę.
