@@ -45,3 +45,33 @@ print(suma)
 # Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
 print("------")
 print()
+# num = []
+# for _ in range(30):
+#     num.append(random.randint(5, 25))
+print(num)
+n_num = []
+
+for index, values in enumerate(num):
+    print(index, values)
+    inval = values - index
+    n_num.append(inval)
+print(n_num)
+
+# Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
+print("------")
+print()
+
+print(num)
+
+for _ in range(10):
+    num.append(random.randint(5, 25))
+print(num)
+print(len(num))
+
+print("------")
+print()
+# Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indekso reikšmių, o kitas iš porinių;
+
+
+
+
