@@ -158,17 +158,17 @@ list2 = []
 list3 = []
 final_list = []
 
-for _ in range(10):
+for _ in range(100):
     let = random.choice(lol)
     list1.append(let)
 print(list1)
 
-for _ in range(10):
+for _ in range(100):
     let = random.choice(lol)
     list2.append(let)
 print(list2)
 
-for _ in range(10):
+for _ in range(100):
     let = random.choice(lol)
     list3.append(let)
 print(list3)
@@ -176,12 +176,14 @@ print(list3)
 f = list1[0] + list2[0] + list3[0]
 print(f)
 
-for i in range(10):
+for i in range(100):
     indeks = list1[i] + list2[i] + list3[i]
     final_list.append(indeks)
 print(final_list)
 
-
+my_set = set(final_list)
+print(my_set)
+print(len(my_set))
 
 
 
