@@ -128,22 +128,22 @@ print()
 print("------")
 print()
 
-abcd = []
-lol = ["A","B","C","D"]
+let_list = []
+abcd = ["A","B","C","D"]
 
 for _ in range(20):
-    let = random.choice(lol)
-    abcd.append(let)
-print(abcd)
+    rnd = random.choice(abcd)
+    let_list.append(rnd)
+print(let_list)
 
-print(f" Letter A count - {abcd.count("A")}")
-print(f" Letter B count - {abcd.count("B")}")
-print(f" Letter C count - {abcd.count("C")}")
-print(f" Letter D count - {abcd.count("D")}")
+print(f" Letter A count - {let_list.count("A")}")
+print(f" Letter B count - {let_list.count("B")}")
+print(f" Letter C count - {let_list.count("C")}")
+print(f" Letter D count - {let_list.count("D")}")
 
 # Išrūšiuokite 3 uždavinio masyvą pagal abecėlę.
 
-fixed = sorted(abcd)
+fixed = sorted(let_list)
 print(fixed)
 
 # Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes.
@@ -159,31 +159,25 @@ list3 = []
 final_list = []
 
 for _ in range(100):
-    let = random.choice(lol)
+    let = random.choice(abcd)
     list1.append(let)
 print(list1)
 
 for _ in range(100):
-    let = random.choice(lol)
+    let = random.choice(abcd)
     list2.append(let)
 print(list2)
 
 for _ in range(100):
-    let = random.choice(lol)
+    let = random.choice(abcd)
     list3.append(let)
 print(list3)
-
-f = list1[0] + list2[0] + list3[0]
-print(f)
 
 for i in range(100):
     indeks = list1[i] + list2[i] + list3[i]
     final_list.append(indeks)
-print(final_list)
+print(f"All combinations - {final_list}")
 
 my_set = set(final_list)
-print(my_set)
-print(len(my_set))
-
-
-
+print(f"The final unique list of combinations - {my_set}")
+print(f"The amount of combinations - {len(my_set)}")
