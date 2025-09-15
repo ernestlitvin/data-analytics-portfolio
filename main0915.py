@@ -23,3 +23,15 @@ print(list2)
 # print(numbers1)
 # print(number2)
 
+# Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, kurios yra pirmame 6 uždavinio masyve,
+# bet nėra antrame 6 uždavinio masyve.
+print("-----")
+print()
+
+my_set1 = set(list1)
+my_set2 = set(list2)
+list3 = my_set1 - my_set2
+print(list3)
+print(len(list3))
+
+
