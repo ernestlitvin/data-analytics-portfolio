@@ -30,8 +30,24 @@ print()
 
 my_set1 = set(list1)
 my_set2 = set(list2)
-list3 = my_set1 - my_set2
+set_diff = my_set1 - my_set2
+list3 = list(set_diff)
+
 print(list3)
 print(len(list3))
+
+# Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 6 uždavinio masyvuose.
+print("-----")
+print()
+
+match = my_set1 & my_set2
+list4 = list(match)
+print(list4)
+
+# Sugeneruokite 10 skaičių masyvą pagal taisyklę: Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25.
+# Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+
+
+
 
 
