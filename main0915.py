@@ -46,8 +46,18 @@ print(list4)
 
 # Sugeneruokite 10 skaičių masyvą pagal taisyklę: Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25.
 # Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+print("-----")
+print()
 
+list5 = []
 
+while len(list5) < 2:
+    num = random.randint(5,25)
+    list5.append(num)
+print(list5)
 
+for _ in range(8):
+    new_val = list5[-1] + list5[-2]
+    list5.append(new_val)
 
-
+print(list5)
