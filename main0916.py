@@ -78,6 +78,25 @@ def get_rnd_num(min_val,max_val):
 random_num = get_rnd_num(1,10)
 print(random_num)
 
+print()
+print("-----")
+# Sukurkite Funkciją kuri sugeneruotų random skaičių masyvą ir jį gražintų.
+# Funkcija priima tris kintamuosius, min, max ir length reikšmėms nustatyti.
+
+def generate_random_list(min_val, max_val, length):
+    random_list = []
+    for i in range(length):
+        num = random.randint(min_val,max_val)
+        random_list.append(num)
+    return random_list
+
+li = generate_random_list(12,102,12)
+print(li)
+
+
+
+
+
 
 
 
