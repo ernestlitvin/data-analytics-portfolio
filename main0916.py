@@ -1,3 +1,6 @@
+import random
+
+
 def function_with_print(a, b):
     print(a + b) # Просто показывает результат
 
@@ -64,6 +67,18 @@ def print_items_list(items):
         print(item, end=" ")
 my_plants = ["azuolas", "pusis", "berzas", "egle", "liepa", "klevas", "saulegraza", "ramune", "roze", "tulpe"]
 print_items_list(my_plants)
+
+# Sukurkite Funkciją kuri priima du kintamuosius, min ir max reikšmėms nustatyti ir
+# sugeneruoja random int skaičių ir jį gražintų.
+print()
+print("-----")
+
+def get_rnd_num(min_val,max_val):
+    return random.randint(min_val,max_val)
+random_num = get_rnd_num(1,10)
+print(random_num)
+
+
 
 
 
