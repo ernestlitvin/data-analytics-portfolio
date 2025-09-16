@@ -97,11 +97,18 @@ print()
 print("-----")
 # Sukurkite Funkciją kuri panaudotų 6toje užduotyje sugeneruotą masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
 
-def generated_list(li):
+def sum_generated_list(li):
     return sum(li)
-suma = generated_list(li)
+suma = sum_generated_list(li)
 print(suma)
 
+# Sukurkite Funkciją kuri priimtų 6toje užduotyje sugeneruotą masyvą ir gražintų jos skaičių vidurkį.
+print()
+print("-----")
+def avg_generated_list(li):
+    return sum(li) / len(li)
+avg = avg_generated_list(li)
+print(avg)
 
 
 
