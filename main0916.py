@@ -57,6 +57,14 @@ print(multipl(5,6))
 # print(result)
 
 # Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.
+print()
+print("-----")
+def print_items_list(items):
+    for item in items:
+        print(item, end=" ")
+my_plants = ["azuolas", "pusis", "berzas", "egle", "liepa", "klevas", "saulegraza", "ramune", "roze", "tulpe"]
+print_items_list(my_plants)
+
 
 
 
