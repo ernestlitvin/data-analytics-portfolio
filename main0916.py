@@ -45,3 +45,18 @@ def PISq():
     return 9.8596
 print(PISq())
 
+# Sukurkite Funkciją kuri priima du kintamuosius. Funkcija gražina skaičių sandaugą.; Gautą reikšmę atspausdinkite.
+print()
+print("-----")
+
+def multipl(a,b):
+    return a * b
+print(multipl(5,6))
+##
+# result = multipl(5,6)
+# print(result)
+
+# Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.
+
+
+
