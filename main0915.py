@@ -51,7 +51,7 @@ print()
 
 list5 = []
 
-while len(list5) < 2:
+for _ in range(2):
     num = random.randint(5,25)
     list5.append(num)
 print(list5)
@@ -59,5 +59,7 @@ print(list5)
 for _ in range(8):
     new_val = list5[-1] + list5[-2]
     list5.append(new_val)
-
 print(list5)
+
+
+
