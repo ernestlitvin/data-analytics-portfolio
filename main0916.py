@@ -122,12 +122,41 @@ def draw_rectangle(height,width):
         print()
 draw_rectangle(5,10)
 
+# Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
+# Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
+print()
+print("-----")
 
+# sent = "Šiandien labai graži diena"
+# print(sent)
+# length = len(sent)
+# print(f"The amount of all symbols in a string - {length}")
+# space_count = sent.count(" ")
+# print(f"The amount of spaces in a string - {space_count}")
+# symbols = len(sent) - space_count
+# print(f"The amount of symbols in a string - {symbols}")
 
+def symbols_spaces_count(sentence):
+    symbols_count = 0
+    spaces_count = 0
+    for char in sentence:
+        if char == " ":
+            spaces_count += 1
+        else:
+            symbols_count += 1
+    return symbols_count, spaces_count
 
+s_count, sp_count = symbols_spaces_count("Šiandien labai graži diena")
+print(f"Symbols count: {s_count}")
+print(f"Spaces count: {sp_count}")
 
-
-
-
-
+# alternative way
+# def symb(sentence):
+#     space_count = sentence.count(" ")
+#     symbols = len(sentence) - space_count
+#     return symbols, space_count
+#
+# symbol_count, space_count = symb("Šiandien labai graži diena")
+# print(f"Amount of symbols: {symbol_count}")
+# print(f"Amount of spces: {space_count}")
 
