@@ -51,6 +51,8 @@ print()
 
 list5 = []
 
+## list5 = [random.randint(5, 25), random.randint(5, 25)]
+
 for _ in range(2):
     num = random.randint(5,25)
     list5.append(num)
