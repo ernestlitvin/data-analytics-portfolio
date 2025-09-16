@@ -146,7 +146,7 @@ def symbols_spaces_count(sentence):
             symbols_count += 1
     return symbols_count, spaces_count
 
-s_count, sp_count = symbols_spaces_count("Šiandien labai graži diena")
+s_count, sp_count = symbols_spaces_count("Jeigu jus norite gauti pinigu, tai reiketu juos uzdirbti")
 print(f"Symbols count: {s_count}")
 print(f"Spaces count: {sp_count}")
 
@@ -159,4 +159,24 @@ print(f"Spaces count: {sp_count}")
 # symbol_count, space_count = symb("Šiandien labai graži diena")
 # print(f"Amount of symbols: {symbol_count}")
 # print(f"Amount of spces: {space_count}")
+
+# Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų.
+# Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
+print()
+print("-----")
+
+def rev_sent(sentence):
+    reversed_str = ""
+    for char in reversed(sentence):
+        reversed_str += char
+    return reversed_str
+
+ex = rev_sent("Ka daryti")
+print(ex)
+
+## alternative way
+# def reversed_sentence(sentence):
+#     return sentence[::-1]
+# ex = reversed_sentence("Šiandien labai graži diena")
+# print(ex)
 
