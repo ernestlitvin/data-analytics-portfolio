@@ -180,3 +180,26 @@ print(ex)
 # ex = reversed_sentence("Šiandien labai graži diena")
 # print(ex)
 
+# Sukurti funkciją, kuri apsuka tik žodžius. “Labas rytas” -> “sabal satyr” ir atspausdina rezultatą
+print()
+print("-----")
+
+def rev_words(sentence):
+    sentence = sentence.split()
+    reversed_words = ""
+    for word in sentence:
+        reversed_words += word[::-1] + " "
+    return reversed_words
+
+he = rev_words("Nu ziurek kaip ten buna, o pinigu nera")
+print(he)
+
+## alternative way
+# def rev_words_short(sentence):
+#     words = sentence.split()
+#     reversed_words_list = [word[::-1] for word in words]
+#     return " ".join(reversed_words_list)
+#
+# he = rev_words_short("Nu ziurek kaip ten buna, o pinigu nera")
+# print(he)
+
