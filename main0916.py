@@ -110,6 +110,18 @@ def avg_generated_list(li):
 avg = avg_generated_list(li)
 print(avg)
 
+# Sukurkite Funkciją kuri priimtų du skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
+# Pirmas skaičius- išoriniam ciklui, antras vidiniam.
+print()
+print("-----")
+
+def draw_rectangle(height,width):
+    for row in range(height):
+        for col in range(width):
+            print("* ", end=" ")
+        print()
+draw_rectangle(5,10)
+
 
 
 
