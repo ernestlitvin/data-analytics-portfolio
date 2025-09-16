@@ -203,3 +203,14 @@ print(he)
 # he = rev_words_short("Nu ziurek kaip ten buna, o pinigu nera")
 # print(he)
 
+# Sukurkite funkciją, kuri priimtų masyvą ir atspausdintų tik tuos elementus kurie yra skaičiai.
+
+
+
+
+
+
+
+
+
+
