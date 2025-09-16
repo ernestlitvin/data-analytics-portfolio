@@ -90,8 +90,18 @@ def generate_random_list(min_val, max_val, length):
         random_list.append(num)
     return random_list
 
-li = generate_random_list(12,102,12)
+li = generate_random_list(1,10,5)
 print(li)
+
+print()
+print("-----")
+# Sukurkite Funkciją kuri panaudotų 6toje užduotyje sugeneruotą masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+
+def generated_list(li):
+    return sum(li)
+suma = generated_list(li)
+print(suma)
+
 
 
 
