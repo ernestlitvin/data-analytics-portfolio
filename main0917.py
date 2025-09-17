@@ -18,7 +18,6 @@ def whole_number(massive, print_only_integers=True):
         if print_only_integers == True:
             if isinstance(item, int) and not isinstance(item, bool) :
                 print(item, end=" ")
-
         else:
             if isinstance(item, (int, float)) and not isinstance(item, bool):
                 print(item, end=" ")
