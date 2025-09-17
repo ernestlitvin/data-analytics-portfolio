@@ -32,3 +32,19 @@ def word_count(text):
     text = text.split()
     return len(text)
 print(word_count("How many words in this sentence?"))
+
+# Sukurkite funkciją kuri priima du parametrus. Skaičių masyvą ir boolean.
+# Funkcija gražina prafiltruotą masyvą. Kai antras parametras True/tik poriniais skaičiais, False/tik neporiniais skaičiais.
+print()
+print("-----")
+def filtered_numbers(massi, print_only_even = True):
+    for item in massi:
+        if print_only_even == True:
+            if item % 2 == 0:
+                print(item, end=" ")
+        else:
+            if item % 2 != 0:
+                print(item, end=" ")
+
+massi = [1,2,3,4,5,6,7,8,9,10,11,12]
+fil = filtered_numbers(massi, True)
