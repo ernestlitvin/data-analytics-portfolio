@@ -98,7 +98,21 @@ print(ex)
 # ex = unique_list(list_of_numbers)
 # print(ex)
 
+# Sukurkite funkciją kuri priima tekstą ir atspausdina tekste daugiausiai pasikartojantį simbolį.
+print()
+print("-----")
 
+
+def most_repeated_letter(text):
+    letter_counts = {}
+    for letter in text:
+        if letter in letter_counts:
+            letter_counts[letter] += 1
+        else:
+            letter_counts[letter] = 1
+    print(letter_counts)
+
+most_repeated_letter("koks tu")
 
 
 
