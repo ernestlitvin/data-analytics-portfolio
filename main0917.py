@@ -37,7 +37,6 @@ print(word_count("How many words in this sentence?"))
 # Funkcija gražina prafiltruotą masyvą. Kai antras parametras True/tik poriniais skaičiais, False/tik neporiniais skaičiais.
 print()
 print("-----")
-
 def filtered_numbers(massi, print_only_even = True):
     filtered_list = []
     for item in massi:
@@ -55,4 +54,18 @@ fil_odd = filtered_numbers(massi, False)
 print(f"Even numbers - {fil_even}")
 print(f"Odd numbers - {fil_odd}")
 
+# Sukurkite funkciją number_is_prime. Funkcija priima skaičių, gražina True/False ar skaičius pirminis.
+print()
+print("-----")
+def number_is_prime(num):
+    if num < 2:
+        return False
+    for item in range(2, num - 1):
+        if num % item == 0:
+            return False
+    else:
+        return True
 
+print(f"Is 5 is prime? {number_is_prime(5)}")
+print(f"Is 9 is prime? {number_is_prime(9)}")
+print(f"Is 2 is prime? {number_is_prime(2)}")
