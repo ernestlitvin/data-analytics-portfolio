@@ -37,14 +37,22 @@ print(word_count("How many words in this sentence?"))
 # Funkcija gražina prafiltruotą masyvą. Kai antras parametras True/tik poriniais skaičiais, False/tik neporiniais skaičiais.
 print()
 print("-----")
+
 def filtered_numbers(massi, print_only_even = True):
+    filtered_list = []
     for item in massi:
         if print_only_even == True:
             if item % 2 == 0:
-                print(item, end=" ")
+                filtered_list.append(item)
         else:
             if item % 2 != 0:
-                print(item, end=" ")
+                filtered_list.append(item)
+    return filtered_list
 
 massi = [1,2,3,4,5,6,7,8,9,10,11,12]
-fil = filtered_numbers(massi, True)
+fil_even = filtered_numbers(massi, True)
+fil_odd = filtered_numbers(massi, False)
+print(f"Even numbers - {fil_even}")
+print(f"Odd numbers - {fil_odd}")
+
+
