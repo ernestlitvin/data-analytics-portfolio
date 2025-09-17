@@ -102,7 +102,6 @@ print(ex)
 print()
 print("-----")
 
-
 def most_repeated_letter(text):
     letter_counts = {}
     for letter in text:
@@ -110,12 +109,28 @@ def most_repeated_letter(text):
             letter_counts[letter] += 1
         else:
             letter_counts[letter] = 1
-    print(letter_counts)
+    print(max(letter_counts, key=letter_counts.get))
+most_repeated_letter("nu nu ir nereikia")
 
-most_repeated_letter("koks tu")
+# Sukurkite funkciją kuri priima tekstą ir atspausdina jame esantį ilgiausią žodį.
+print()
+print("-----")
 
+def longest_word(text):
+    text = text.split()
+    longest_word = ""
+    length_word = 0
+    for word in text:
+        if len(word) > length_word:
+            length_word = len(word)
+            longest_word = word
+    print(longest_word)
+longest_word("kaip visiems o man nieko neduoda gospadoris kukuliukas-makaliukas")
 
-
-
-
+## alternative way
+# def longest_word_short(text):
+#     words = text.split()
+#     longest = max(words, key=len)
+#     print(longest)
+# longest_word_short("kaip visiems o man nieko neduoda gospadoris kukuliukas-makaliukas")
 
