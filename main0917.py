@@ -26,3 +26,9 @@ def whole_number(massive, print_only_integers=True):
 massive = [-534.3, -200, -12.4, 0, 1, 5, 21, 543, 23.5, 453.3, "dog", "no", True, False ]
 whole_number(massive, True)
 whole_number(massive, False)
+
+## Sukurkite funkciją word_count kuri priimtų textą ir gražintų kiek jame yra žodžių.
+def word_count(text):
+    text = text.split()
+    return len(text)
+print(word_count("How many words in this sentence?"))
