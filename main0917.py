@@ -65,7 +65,43 @@ def number_is_prime(num):
             return False
     else:
         return True
-
 print(f"Is 5 is prime? {number_is_prime(5)}")
 print(f"Is 9 is prime? {number_is_prime(9)}")
 print(f"Is 2 is prime? {number_is_prime(2)}")
+
+# Sukurkite funkciją kuri priima du argumentus. Gražina pirmąjį skaičių pakeltą laipsniu tokiu kaip antras skaičius.
+print()
+print("-----")
+
+def number_in_square(a,b):
+    return (a ** b)
+sq = number_in_square(5,3)
+print(sq)
+
+# Sukurkite funkciją kuri priima skaičių masyvą ir gražina tik nepasikartojančius elementus
+print()
+print("-----")
+def unique_list(numbers_list):
+    new_list = []
+    for item in numbers_list:
+        if item not in new_list:
+            new_list.append(item)
+    return new_list
+
+numbers_list = [1,1,2,3,4,5,6,7,8,8,9,10,11,12,12]
+ex = unique_list(numbers_list)
+print(ex)
+## alternative way
+# def unique_list(list_of_numbers):
+#     return list(set(list_of_numbers))
+# list_of_numbers = [1,2,2,3,4,5,5,6,7,8,9,10,10,11,12]
+# ex = unique_list(list_of_numbers)
+# print(ex)
+
+
+
+
+
+
+
+
