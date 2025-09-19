@@ -84,3 +84,9 @@ print(title)
 print("-----")
 two_rows = books_df[["Title", "Author"]]
 print(two_rows)
+print("-----")
+third_b = books_df.loc[2]
+print(third_b)
+print("-----")
+after_1900 = books_df[books_df["Year"] > 1900]
+print(after_1900)
