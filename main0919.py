@@ -70,7 +70,9 @@ books = {
 books_df = pd.DataFrame(books)
 print(books_df)
 print("------")
-two_coll = books_df.loc[0:1]
+two_coll = books_df.head(2)
 print(two_coll)
+# two_coll = books_df.loc[0:1] ## alternative way
+# print(two_coll)
 print("-----")
 books_df.info()
