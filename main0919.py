@@ -63,8 +63,8 @@ print()
 books = {
     "Title" : ["To Kill a Mockingbird", "The Great Gatsby", "Moby Dick"],
     "Author" : ["Harper Lee", "F. Scott Fitzgerald", "Herman Melville"],
-    "Year" : ["1960", "1925", "1851"],
-    "Pages" : ["281", "180", "635"]
+    "Year" : [1960, 1925, 1851],
+    "Pages" : [281, 180, 635]
 }
 
 books_df = pd.DataFrame(books)
@@ -73,5 +73,4 @@ print("------")
 two_coll = books_df.loc[0:1]
 print(two_coll)
 print("-----")
-structure = books_df.info()
-print(structure)
+books_df.info()
