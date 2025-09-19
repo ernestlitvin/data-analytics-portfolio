@@ -90,3 +90,11 @@ print(third_b)
 print("-----")
 after_1900 = books_df[books_df["Year"] > 1900]
 print(after_1900)
+print("----")
+books_df["Age"] = 2025 - books_df["Year"]
+books_df["Genere"] = "Classic"
+print(books_df)
+print("----")
+sorted_books_df = books_df.sort_values(by='Year')
+print(sorted_books_df)
+
