@@ -70,5 +70,8 @@ books = {
 books_df = pd.DataFrame(books)
 print(books_df)
 print("------")
-two_coll = books_df.iloc[0]
+two_coll = books_df.loc[0:1]
 print(two_coll)
+print("-----")
+structure = books_df.info()
+print(structure)
