@@ -80,5 +80,16 @@ print(stats)
 print("----")
 names_via_dot = df.Name # if no spaces in the name of col - legit to use
 print(names_via_dot)
-
+## .loc[] (location)
+## .iloc[] (integer location)
+print("----")
+first_pokemon = pokemon_df.iloc[0]
+print(first_pokemon)
+print("----")
+middle_pokemons = pokemon_df.iloc[1:3]
+print(middle_pokemons)
+print("----")
+cell_value = df.iloc[0,1]
+print(cell_value)
+print("-----")
 
