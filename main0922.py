@@ -58,6 +58,17 @@ pokemon_df.info() ## all information about table
 print("----")
 print(pokemon_df.describe())
 
-
+## 1 task
+df = pd.read_csv("pokemon.csv")
+print(df)
+print(df.head(5))
+print("----")
+## 2 task
+df.info() ## "type 2" missing 2 meanings
+## task 3
+print("----")
+print(df.describe()) ## max defense is 90
+index = False
+df.to_csv("pokemon_for_colleague.csv", index = False)
 
 
