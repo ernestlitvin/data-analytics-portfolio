@@ -104,9 +104,7 @@ print(high_attack_condition)
 print("----")
 strong_pokemons = pokemon_df[high_attack_condition] ## or strong_pokemons = pokemon_df[pokemon_df['Attack'] > 80]
 print(strong_pokemons)
-
-# Найти легендарных покемонов (`Legendary` == True) С высокой защитой (`Defense` > 70)
-
+print("----")
 is_legendary = pokemon_df["Legendary"] == True
 high_def = pokemon_df["Defense"] > 70
 print("----")
@@ -115,5 +113,19 @@ print(unique_pokemon)
 ## or
 ## legendary_and_tough = df[(df['Legendary'] == True) & (df['Defense'] > 70)]
 ## print(legendary_and_tough)
-
-
+print("----")
+pokemon_cards = pokemon_df[["Name", "Type 1", "HP"]]
+print(pokemon_cards)
+print("----")
+third = pokemon_df.iloc[2]
+print(third)
+print("----")
+fast_pokemons = pokemon_df["HP"] > 90
+hp_pokemons = pokemon_df[fast_pokemons]
+print(hp_pokemons)
+print("----")
+type_1 = pokemon_df[Type 1("Grass")]
+# type_2 = pokemon_df["Type 2"] == ["Poison"]
+two_types = pokemon_df[type_1]
+print(two_types)
+print("----")
