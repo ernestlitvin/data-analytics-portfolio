@@ -49,6 +49,15 @@ print("----")
 print()
 pokemon_df = pd.read_csv("pokemon.csv")
 print(pokemon_df)
+print("----")
+print(pokemon_df.head(3)) ## first three lines
+print("----")
+print(pokemon_df.tail(3))  ## last three lines
+print("----")
+pokemon_df.info() ## all information about table
+print("----")
+print(pokemon_df.describe())
+
 
 
 
