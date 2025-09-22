@@ -82,6 +82,7 @@ names_via_dot = df.Name # if no spaces in the name of col - legit to use
 print(names_via_dot)
 ## .loc[] (location)
 ## .iloc[] (integer location)
+## in () -> always go rows, then coll (1,2)
 print("----")
 first_pokemon = pokemon_df.iloc[0]
 print(first_pokemon)
@@ -89,7 +90,12 @@ print("----")
 middle_pokemons = pokemon_df.iloc[1:3]
 print(middle_pokemons)
 print("----")
-cell_value = df.iloc[0,1]
+cell_value = pokemon_df.iloc[0,1]
 print(cell_value)
 print("-----")
+mewtwo = pokemon_df.loc[3]
+print(mewtwo)
+print("----")
+subset = pokemon_df.loc[2:4, ["Name", "HP"]]
+print(subset)
 
