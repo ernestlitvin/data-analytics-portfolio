@@ -45,9 +45,10 @@ print("----")
 print("Type of data in collums: ")
 print(games_df.dtypes)
 
-
-
-
+print("----")
+print()
+pokemon_df = pd.read_csv("pokemon.csv")
+print(pokemon_df)
 
 
 
