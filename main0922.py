@@ -68,7 +68,17 @@ df.info() ## "type 2" missing 2 meanings
 ## task 3
 print("----")
 print(df.describe()) ## max defense is 90
-index = False
-df.to_csv("pokemon_for_colleague.csv", index = False)
+df.to_csv("pokemon_for_colleague.csv", index=False)
+print("----")
+print()
+
+names = pokemon_df["Name"] # choose specific col
+print(names)
+print("----")
+stats = pokemon_df[["Name", "Attack", "Defense"]] ## few col-s
+print(stats)
+print("----")
+names_via_dot = df.Name # if no spaces in the name of col - legit to use
+print(names_via_dot)
 
 
