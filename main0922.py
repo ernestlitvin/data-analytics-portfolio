@@ -98,4 +98,22 @@ print(mewtwo)
 print("----")
 subset = pokemon_df.loc[2:4, ["Name", "HP"]]
 print(subset)
+print("----")
+high_attack_condition = pokemon_df["Attack"] > 80
+print(high_attack_condition)
+print("----")
+strong_pokemons = pokemon_df[high_attack_condition] ## or strong_pokemons = pokemon_df[pokemon_df['Attack'] > 80]
+print(strong_pokemons)
+
+# Найти легендарных покемонов (`Legendary` == True) С высокой защитой (`Defense` > 70)
+
+is_legendary = pokemon_df["Legendary"] == True
+high_def = pokemon_df["Defense"] > 70
+print("----")
+unique_pokemon = pokemon_df[is_legendary & high_def]
+print(unique_pokemon)
+## or
+## legendary_and_tough = df[(df['Legendary'] == True) & (df['Defense'] > 70)]
+## print(legendary_and_tough)
+
 
