@@ -124,8 +124,10 @@ fast_pokemons = pokemon_df["HP"] > 90
 hp_pokemons = pokemon_df[fast_pokemons]
 print(hp_pokemons)
 print("----")
-type_1 = pokemon_df[Type 1("Grass")]
-# type_2 = pokemon_df["Type 2"] == ["Poison"]
-two_types = pokemon_df[type_1]
-print(two_types)
+print("grass-and-posion")
+# pokemon_df["Type 1"] == "Grass"
+# pokemon_df["Type 2"] == "Poison"
+grass_and_poison = pokemon_df[(pokemon_df["Type 1"] == "Grass") & (pokemon_df["Type 2"] == "Poison")]
+print(grass_and_poison)
 print("----")
+
