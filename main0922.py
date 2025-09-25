@@ -136,4 +136,18 @@ print(pokemon_df.head())
 print("----")
 df_without_total = pokemon_df.drop(columns=["Total"]) ## df.drop('Total', axis=1)
 print(df_without_total)
+print("----")
+pokemon_df["Type 2"] = pokemon_df["Type 2"].fillna("Single Type")
+print(pokemon_df)
+print("----new---")
+duplicate_example = pd.DataFrame({
+    "letter": ["a", "b", "a"],
+    "number": [1, 2, 1]
+})
+print("---before duplicates---")
+print(duplicate_example)
+print("----")
+no_duplicates = duplicate_example.drop_duplicates()
+print("---after duplicates---")
+print(no_duplicates)
 
