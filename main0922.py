@@ -130,4 +130,10 @@ print("grass-and-posion")
 grass_and_poison = pokemon_df[(pokemon_df["Type 1"] == "Grass") & (pokemon_df["Type 2"] == "Poison")]
 print(grass_and_poison)
 print("----")
+pokemon_df["Total"] = pokemon_df["HP"] + pokemon_df["Defense"] + pokemon_df["Attack"]
+print(pokemon_df)
+print(pokemon_df.head())
+print("----")
+df_without_total = pokemon_df.drop(columns=["Total"]) ## df.drop('Total', axis=1)
+print(df_without_total)
 
