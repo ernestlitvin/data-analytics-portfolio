@@ -137,8 +137,6 @@ print("----")
 df_without_total = pokemon_df.drop(columns=["Total"]) ## df.drop('Total', axis=1)
 print(df_without_total)
 print("----")
-pokemon_df["Type 2"] = pokemon_df["Type 2"].fillna("Single Type")
-print(pokemon_df)
 print("----new---")
 duplicate_example = pd.DataFrame({
     "letter": ["a", "b", "a"],
@@ -150,4 +148,22 @@ print("----")
 no_duplicates = duplicate_example.drop_duplicates()
 print("---after duplicates---")
 print(no_duplicates)
-
+print("-----------------------------")
+pokemon_df["Att_Def_Ratio"] = pokemon_df["Attack"] / pokemon_df["Defense"]
+print(pokemon_df.head(5))
+print("----")
+pokemon_df["Type 2"] = pokemon_df["Type 2"].fillna("Unknown")
+print(pokemon_df)
+print("----")
+pokemon_simplfied = (pokemon_df.drop(columns = ["HP", "Legendary"]))
+print(pokemon_simplfied)
+print("-----")
+client_list = pd.DataFrame({
+    "Name": ["John", "Tom", "Peter", "Tom"],
+    "Purchase amount": [100, 200, 300, 200]
+})
+print("before duplxcates")
+print(client_list)
+print("after duplcaites")
+without_duplicates = client_list.drop_duplicates()
+print(without_duplicates)
