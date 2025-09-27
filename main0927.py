@@ -15,3 +15,27 @@ print(mean_stats_by_type)
 print("---")
 pokemon_count_by_type = pokemon_df.groupby("Type 1")["ID"].count()
 print(pokemon_count_by_type)
+print("---")
+# .agg() -> few operations
+summary_by_type = pokemon_df.groupby("Type 1").agg(
+    avg_attack = ("Attack", "mean"),
+    max_defense = ("Defense", "max"),
+    pokemon_count = ("Name", "count")
+)
+print(summary_by_type)
+print("---")
+sales_df = pd.read_csv("sales.csv")
+print(sales_df)
+print("--sum of sales--")
+manager_sales = sales_df.groupby("Manager")["Sales"].sum()
+print(manager_sales)
+print()
+print("--max sales by region--")
+max_sales_by_region = sales_df.groupby("Region")["Sales"].max()
+print(max_sales_by_region)
+print()
+print("--count by product --")
+count_by_product = sales_df.groupby("Product").count()
+print(count_by_product)
+
+
