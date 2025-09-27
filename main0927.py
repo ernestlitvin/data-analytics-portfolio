@@ -35,7 +35,14 @@ max_sales_by_region = sales_df.groupby("Region")["Sales"].max()
 print(max_sales_by_region)
 print()
 print("--count by product --")
-count_by_product = sales_df.groupby("Product").count()
+count_by_product = sales_df.groupby("Product")["Product"].count()
 print(count_by_product)
+print()
+print("--managers report--")
+managers_report = sales_df.groupby("Manager").agg(
+    sum_of_sales = ("Sales", "sum"),
+    avg_check = ("Sales", "mean")
+)
+print(managers_report)
 
 
