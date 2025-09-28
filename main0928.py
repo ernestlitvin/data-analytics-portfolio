@@ -35,6 +35,8 @@ print(all_staff)
 # left (left): Take all the rows from the left table. If any of them do not match to the right, there will be blanks - NaN.
 # right (right): Reverse, all rows are taken from the right table.
 # outer (full): Takes all rows from both tables.
+# if the name of "keys" are different in both tables, there is a need to use left_on и right_on.
+# Example: pd.merge(orders, customers, left_on='customer_id', right_on='id', ...)
 print("\n--- Merged Employees & Salary ---")
 merged_inner = pd.merge(staff_df, salary_df, on="employee_id")
 print(merged_inner)
@@ -46,6 +48,34 @@ print(merged_left)
 merged_outer = pd.merge(staff_df, salary_df, on="employee_id", how="outer")
 print("\n")
 print(merged_outer)
+
+# Data for practicing
+orders = pd.DataFrame({
+    'order_id': [1, 2, 3, 4],
+    'customer_id': [10, 20, 10, 30],
+    'product': ['Book', 'Pen', 'Book', 'Notebook']
+})
+customers = pd.DataFrame({
+    'id': [10, 20, 40],
+    'name': ['Alex', 'Mary', 'Sergio']
+})
+print("\n")
+print(orders)
+print("\n")
+print(customers)
+print("\n")
+active_customers = pd.merge(orders, customers, left_on = "customer_id", right_on = "id")
+active_customers_drop = active_customers.drop(columns = ["id"])
+print("\n --- Active Customers ---")
+print(active_customers_drop)
+print("\n")
+order_with_names = pd.merge(orders, customers, left_on = "customer_id", right_on = "id", how ="left")
+print("\n --- Order With Names ---")
+print(order_with_names) # почему id 10.0 ? 20.0  10.0 ?
+print("\n")
+customers_and_orders = pd.merge(orders, customers, left_on = "customer_id", right_on = "id", how = "right")
+print("\n --- Customers and Orders ---")
+print(customers_and_orders) # а тут order_id 1.0 3.0 2.0 и customer_id 10.0 10.0 20.0 почему ?
 
 
 
