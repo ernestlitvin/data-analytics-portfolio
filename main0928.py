@@ -71,11 +71,56 @@ print(active_customers_drop)
 print("\n")
 order_with_names = pd.merge(orders, customers, left_on = "customer_id", right_on = "id", how ="left")
 print("\n --- Order With Names ---")
-print(order_with_names) # почему id 10.0 ? 20.0  10.0 ?
+print(order_with_names)
 print("\n")
 customers_and_orders = pd.merge(orders, customers, left_on = "customer_id", right_on = "id", how = "right")
 print("\n --- Customers and Orders ---")
-print(customers_and_orders) # а тут order_id 1.0 3.0 2.0 и customer_id 10.0 10.0 20.0 почему ?
+print(customers_and_orders)
+print("---------")
+sales_df = pd.read_csv('sales.csv')
+print(sales_df)
+print("------")
+pivot = pd.pivot_table(sales_df,
+                       values='Sales',      # what we need
+                       index='Manager',     #  what will be indexes
+                       columns='Product',   # what will be a new column
+                       aggfunc='sum',       #  what function do we apply
+                       fill_value=0)        # how we fill the spaces (if manager didnt sell the product)
+
+print(pivot)
+print("-----")
+df = pd.read_csv('pokemon.csv')
+
+def classify_attack(attack_power):
+    if attack_power > 100:
+        return "Elite"
+    elif attack_power > 70:
+        return "Strong"
+    else:
+        return "Simple"
+df["Attack_class"] = df["Attack"].apply(classify_attack)
+print(df[["Name", "Attack", "Attack_class"]])
+print("----")
+
+time_df = pd.DataFrame({
+    'sale_date': ['2025-09-25', '2025-09-25', '2025-09-26', '2025-09-27'],
+    'amount': [100, 150, 50, 200]
+})
+# print("--- Records type before editing ---")
+# print(time_df.dtypes)
+#
+# time_df['sale_date'] = pd.to_datetime(time_df['sale_date'])
+# print("\n--- Records type after editing ---")
+# print(time_df.dtypes)
+
+# Taking day of a week
+time_df['day_of_week'] = time_df['sale_date'].dt.day_name()
+
+# Taking the number of month
+time_df['month'] = time_df['sale_date'].dt.month
+
+print("\n--- Table with dates components  ---")
+print(time_df)
 
 
 
