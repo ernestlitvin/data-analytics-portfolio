@@ -32,11 +32,20 @@ print(all_staff)
 ## Syntax : pd.merge(left_table, right_table, on='key_table', how='тип_объединения')
 # how (join's type') — most important parametr:
 # inner (internal) (default): Leaves only those rows for which there is a key in both tables.
-# left (left): Take all the rows from the left table. If any of them do not match to the right, there will be blanks (NaN).
+# left (left): Take all the rows from the left table. If any of them do not match to the right, there will be blanks - NaN.
 # right (right): Reverse, all rows are taken from the right table.
 # outer (full): Takes all rows from both tables.
-
-
+print("\n--- Merged Employees & Salary ---")
+merged_inner = pd.merge(staff_df, salary_df, on="employee_id")
+print(merged_inner)
+merged_left = pd.merge(staff_df, salary_df, on="employee_id", how="left")
+print("\n")
+print(merged_left)
+# merged_left["salary"] = merged_left["salary"].fillna("Unknown")
+# print(merged_left)
+merged_outer = pd.merge(staff_df, salary_df, on="employee_id", how="outer")
+print("\n")
+print(merged_outer)
 
 
 
