@@ -15,5 +15,12 @@ print("---Describe of transactions table---")
 print(transactions_df.describe()) #1.5
 price_per_item_mean = transactions_df["price_per_item"].mean().round(0)
 transactions_df["price_per_item"] = transactions_df["price_per_item"].fillna(price_per_item_mean) # 2.1
-print(transactions_df["price_per_item"])
+transactions_df["transaction_date"] = pd.to_datetime(transactions_df["transaction_date"]) # 2.2
+transactions_df = transactions_df.drop_duplicates() # 2.3
+transactions_df["Revenue"] = transactions_df["quantity"] * transactions_df["price_per_item"] # 2.4
+full_df = pd.merge(transactions_df, products_df, on = "product_id", how = "outer") # 3.1
+print("\n--- Table with all components ---")
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+print(full_df)
 
