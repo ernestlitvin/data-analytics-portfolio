@@ -45,3 +45,9 @@ def classify_revenue(revenue):
 full_df["Purchase_level"] = full_df["Revenue"].apply(classify_revenue)
 print(full_df)
 # 6.2
+full_df_piv = pd.pivot_table(full_df,
+               values='Revenue',
+                index='transaction_date',
+                columns='category',
+               aggfunc='sum')
+print(full_df_piv)
