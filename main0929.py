@@ -1,5 +1,7 @@
 import pandas as pd #1.1
 #1.2
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 transactions_df = pd.read_csv("transactions.csv")
 products_df = pd.read_csv("products.csv")
 
@@ -18,9 +20,8 @@ transactions_df["price_per_item"] = transactions_df["price_per_item"].fillna(pri
 transactions_df["transaction_date"] = pd.to_datetime(transactions_df["transaction_date"]) # 2.2
 transactions_df = transactions_df.drop_duplicates() # 2.3
 transactions_df["Revenue"] = transactions_df["quantity"] * transactions_df["price_per_item"] # 2.4
-full_df = pd.merge(transactions_df, products_df, on = "product_id", how = "outer") # 3.1
+full_df = pd.merge(transactions_df, products_df, on = "product_id", how = "left") # 3.1,2
 print("\n--- Table with all components ---")
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
 print(full_df)
+
 
