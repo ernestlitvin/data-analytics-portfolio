@@ -25,3 +25,8 @@ print("\n--- Table with all components ---")
 print(full_df)
 electronics_sale = full_df[full_df["category"] == "Electrics"] # 4.1
 print(electronics_sale)
+big_rev = full_df[full_df["Revenue"] > 10000] # 4.2
+print(big_rev)
+sum_rev_by_cat = full_df.groupby("category")["Revenue"].sum() # 5.1
+print("---Sum of Revenues by category---")
+print(sum_rev_by_cat)
