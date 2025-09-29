@@ -33,3 +33,15 @@ print(sum_rev_by_cat)
 prod_qua_per_client = full_df.groupby("customer_id")["quantity"].mean() # 5.2
 print("\n--- Mean product quantity per client  ---")
 print(prod_qua_per_client)
+# 6.1
+def classify_revenue(revenue):
+    if revenue > 50000:
+        return "Huge purchase"
+    elif revenue > 3000:
+        return "Average purchase"
+    else:
+        return "Low purchase"
+
+full_df["Purchase_level"] = full_df["Revenue"].apply(classify_revenue)
+print(full_df)
+# 6.2
