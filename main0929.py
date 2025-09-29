@@ -23,5 +23,8 @@ transactions_df["Revenue"] = transactions_df["quantity"] * transactions_df["pric
 full_df = pd.merge(transactions_df, products_df, on = "product_id", how = "left") # 3.1,2
 print("\n--- Table with all components ---")
 print(full_df)
-
-
+# electronics_sale = full_df[(full_df["transaction_date"]) & (full_df["category" == "Electronics"])]
+td = full_df["transaction_date"]
+cat = full_df["category"] == "Electrics"
+elec = full_df[(full_df["transaction_date"]) & (full_df["category"] == "Electrics")]
+print(elec)
