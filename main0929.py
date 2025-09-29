@@ -30,3 +30,6 @@ print(big_rev)
 sum_rev_by_cat = full_df.groupby("category")["Revenue"].sum() # 5.1
 print("---Sum of Revenues by category---")
 print(sum_rev_by_cat)
+prod_qua_per_client = full_df.groupby("customer_id")["quantity"].mean() # 5.2
+print("\n--- Mean product quantity per client  ---")
+print(prod_qua_per_client)
