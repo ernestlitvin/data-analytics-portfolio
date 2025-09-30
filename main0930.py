@@ -192,5 +192,37 @@ print(f"\nThird column:\n", third_col)
 # 4
 mat_in_mat = practice_matrix[1:3,2:4]
 print(f"\nPractice matrix:\n", mat_in_mat)
+##### The basic syntax that you need to keep in mind is matrix[strike_rows, strike_columns].
+# Each of these slices follows the rule -> start:stop:step
+matrix = np.arange(25).reshape(5, 5)
+print("Invg mаtrix:\n", matrix)
 
+# 1. Basic cuts (rectangular cuts)
+center_square = matrix[1:4,1:4]
+print(f"\nCenter square matrix:\n", center_square)
+
+# 2. Open sections (from beginning till end)
+# You can miss "start" or "stop" to make a cut from the very beginning or to the very end of the axis.
+# : - means "take everything on this axis".
+# :n - means "take everything from the beginning till element n (not including)".
+# n: - means "take everything from element n (including) to the end".
+
+top_left_corner = matrix[:3,:2]
+print(f"\nTop left:\n", top_left_corner)
+buttom_right_corner = matrix[2:,3:]
+print(f"\nButton right corner:\n", buttom_right_corner)
+
+# 3. Slices with step (step)
+# This is the most powerful tool. It allows you to "jump" through elements. Syntax: start:stop:step.
+
+every_2nd_column = matrix[:,::2]
+print(f"\nEvery 2nd column:\n", every_2nd_column)
+checkboard = matrix[::2, ::2] # every 2nd row and every 2nd column
+print(f"\nCheckboard:\n", checkboard)
+
+# 4. Changing values through slices
+# One of the coolest features of NumPy - you can not only "read" data through a slice, but also "write" into it.
+matrix_copy = matrix.copy()
+matrix_copy[3:, 3:] = 99
+print(f"\nMatrix copy with edited corner:\n", matrix_copy)
 
