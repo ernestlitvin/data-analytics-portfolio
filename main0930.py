@@ -120,6 +120,27 @@ print("\n")
 ## np.arange(start, stop, step): Python’s analog range() but creates the NumPy array.
 arr1 = np.arange(10)
 print(arr1)
+## np.zeros(shape): Creates an array of the specified form, filled with zeros.
+arr2 = np.zeros((2,3))
+print("\n",arr2)
+## np.ones(shape): Same, but with ones.
+
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+# Array's shape (number of rows, number of columns)
+print(f"Form (shape): {matrix.shape}") # (2, 3)
+# Data element type
+print(f"Data type (dtype): {matrix.dtype}") # int64
+# Number of measurements (axes)
+print(f"Number of measurements (ndim): {matrix.ndim}") #2
+
+print("\n") # 1
+pyth_list = [10,11,12,13,14,15]
+vector = np.array(pyth_list)
+print(vector)
+print("\n", vector.shape)
+matriks = np.zeros((3,3)) # 2
+print("\n",matriks)
+print("\n", matriks.ndim)
 
 
 
