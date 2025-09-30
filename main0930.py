@@ -44,3 +44,14 @@ print("--tasks--")
 # sns.countplot(data=full_df, x="product_name")
 # plt.show() # notebook is more popular
 
+sns.barplot(data=full_df, x="quantity", y="category")
+plt.show() # books cat. is more popular
+
+sns.boxplot(data=full_df, x="price_per_item", y="category")
+plt.title("What is the price per item in certain category ?")
+plt.show() # no, the boxplot dont help to figure out, why Electrics is most popular
+
+sns.barplot(data=full_df, x="customer_id", y="Revenue", orient="v")
+plt.show() # 502 and 504 are more valuable customers
+
+
