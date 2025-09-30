@@ -176,9 +176,19 @@ print(f"\nSecond row:\n", row)
 column = matrix[:,0]
 print(f"\nFirst column:\n", column)
 
-
-
-
+## Tasks 2 ##
+practice_matrix = np.arange(1, 13).reshape(3, 4)
+print(f"\nPractice matrix:\n", practice_matrix)
+# reshape(x,y) is a convenient method that "transforms" a one-dimensional array [1, 2, ..., 12] into a 3x4 matrix.
+# 1
+last_item = practice_matrix[2,3]
+print(f"\nLast item: {last_item}")
+# 2
+second_row = practice_matrix[1,:]
+print(f"\nSecond row:\n", second_row)
+# 3
+third_col = practice_matrix[:,2]
+print(f"\nThird column:\n", third_col)
 
 
 
