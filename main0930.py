@@ -43,13 +43,30 @@ daily_revenue = full_df.groupby("transaction_date")["Revenue"].sum().reset_index
 # print("---")
 # print(daily_revenue)
 
-sns.lineplot(data=daily_revenue, x="transaction_date", y="Revenue")
-plt.title("Revenue by Transaction Date")
-plt.xticks(rotation=15) # Rotate dates for better readability
-plt.show()
-## Purpose: Ideal for tracking changes of a numerical variable in time.
-# Helps answer the question: "How did the indicator change day by day?".
+# sns.lineplot(data=daily_revenue, x="transaction_date", y="Revenue")
+# plt.title("Revenue by Transaction Date")
+# plt.xticks(rotation=15) # Rotate dates for better readability
+# plt.show()
+# ## Purpose: Ideal for tracking changes of a numerical variable in time.
+# # Helps answer the question: "How did the indicator change day by day?".
+#
+# sns.lineplot(data=full_df, x="transaction_date", y="Revenue", hue = "category", estimator = "sum")
+# plt.title("Revenue by Transaction Date and Category")
+# plt.xticks(rotation=15)
+# plt.show()
+## if we want to look at the dynamics of each category of products separately - hue parameter can solve it.
+# estimator='sum' is an important parameter that tells lineplot to add values, not count the average.
 
+# numeric_cols = full_df[["quantity", "price_per_item", "Revenue"]]
+# correlation_matrix = numeric_cols.corr()
+# print("--Correlation Matrix--")
+# print(correlation_matrix)
+#
+# sns.heatmap(correlation_matrix, annot=True) # annot=True - very useful parameter, it signs values in cells
+# plt.title("Heatmap of Correlation Matrix")
+# # plt.show()
+# ## Purpose: Visualizes a matrix where the color of the cell depends on its value.
+# # Ideal for displaying correlations or summary tables.
 
 
 
@@ -70,6 +87,29 @@ print("--tasks--")
 # # Even if people buy 1-2 units of electronics, the total revenue will be huge due to the high price.
 # sns.barplot(data=full_df, x="customer_id", y="Revenue", orient="v")
 # plt.show() # 502 and 504 are more valuable customers
+#
+daily_quantity = full_df.groupby("transaction_date")["quantity"].sum().reset_index()
+sns.lineplot(data=daily_quantity, x="transaction_date", y="quantity")
+plt.title("Total Quantity by Transaction Date")
+plt.xticks(rotation=15)
+# plt.show()
+
+sns.lineplot(data=full_df, x="transaction_date", y="Revenue", hue = "customer_id")
+plt.title("Total Revenue by Customer ID")
+plt.xticks(rotation=15)
+# plt.show()
+
+pivot = pd.pivot_table(full_df,
+                       values='Revenue',
+                       index='category',
+                       columns='transaction_date',
+                       aggfunc='sum',
+                       fill_value=0)
+sns.heatmap(pivot,annot=True)
+plt.show()
+
+
+
 
 
 
