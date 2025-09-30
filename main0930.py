@@ -36,6 +36,24 @@ full_df = pd.read_csv("full_df.csv")
 # "Moustache" - shows the main spread of data.
 # Points outside the mustache are emissions (abnormally high or low values).
 
+# daily_revenue_before = full_df.groupby("transaction_date")["Revenue"].sum()
+# print(daily_revenue_before)
+daily_revenue = full_df.groupby("transaction_date")["Revenue"].sum().reset_index() ## reset_index() is very important.
+# It is a bridge that translates data from the "result of grouping" format to the "table ready for visualization" format.
+# print("---")
+# print(daily_revenue)
+
+sns.lineplot(data=daily_revenue, x="transaction_date", y="Revenue")
+plt.title("Revenue by Transaction Date")
+plt.xticks(rotation=15) # Rotate dates for better readability
+plt.show()
+## Purpose: Ideal for tracking changes of a numerical variable in time.
+# Helps answer the question: "How did the indicator change day by day?".
+
+
+
+
+
 print("--tasks--")
 # sns.scatterplot(data=full_df, x="price_per_item", y="quantity")
 # plt.show() # clients are buying cheapest products more often, than expensive
@@ -43,15 +61,16 @@ print("--tasks--")
 # plt.show() # 1-2
 # sns.countplot(data=full_df, x="product_name")
 # plt.show() # notebook is more popular
+#
+# sns.barplot(data=full_df, x="category", y="quantity")
+# plt.show() # books cat. is more popular
+# sns.boxplot(data=full_df, x="price_per_item", y="category")
+# plt.title("What is the price per item in certain category ?")
+# plt.show() # The graph shows that the price per unit of a product in the category "Electronics" is much higher than in others.
+# # Even if people buy 1-2 units of electronics, the total revenue will be huge due to the high price.
+# sns.barplot(data=full_df, x="customer_id", y="Revenue", orient="v")
+# plt.show() # 502 and 504 are more valuable customers
 
-sns.barplot(data=full_df, x="quantity", y="category")
-plt.show() # books cat. is more popular
 
-sns.boxplot(data=full_df, x="price_per_item", y="category")
-plt.title("What is the price per item in certain category ?")
-plt.show() # no, the boxplot dont help to figure out, why Electrics is most popular
-
-sns.barplot(data=full_df, x="customer_id", y="Revenue", orient="v")
-plt.show() # 502 and 504 are more valuable customers
 
 
