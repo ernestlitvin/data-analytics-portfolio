@@ -189,6 +189,8 @@ print(f"\nSecond row:\n", second_row)
 # 3
 third_col = practice_matrix[:,2]
 print(f"\nThird column:\n", third_col)
-
+# 4
+mat_in_mat = practice_matrix[1:3,2:4]
+print(f"\nPractice matrix:\n", mat_in_mat)
 
 
