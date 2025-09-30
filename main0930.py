@@ -94,7 +94,7 @@ plt.title("Total Quantity by Transaction Date")
 plt.xticks(rotation=15)
 # plt.show()
 
-sns.lineplot(data=full_df, x="transaction_date", y="Revenue", hue = "customer_id")
+sns.lineplot(data=full_df, x="transaction_date", y="Revenue", hue = "customer_id", estimator = "sum")
 plt.title("Total Revenue by Customer ID")
 plt.xticks(rotation=15)
 # plt.show()
@@ -106,7 +106,7 @@ pivot = pd.pivot_table(full_df,
                        aggfunc='sum',
                        fill_value=0)
 sns.heatmap(pivot,annot=True)
-plt.show()
+# plt.show()
 
 
 
