@@ -141,6 +141,34 @@ print("\n", vector.shape)
 matriks = np.zeros((3,3)) # 2
 print("\n",matriks)
 print("\n", matriks.ndim)
+# 3
+progression = np.arange(2,11,2)
+print("\n",progression)
+print(progression.dtype)
+print("\n")
+
+vector1 = np.arange(10,20)
+print(f"Basic: \n",vector1)
+first_element = vector1[0]
+print(first_element)
+last_element = vector1[-1]
+print(last_element)
+slice_1 = vector1[1:4]
+print(slice_1)
+slice_2 = vector1[2:] # from 2nd till end
+print(slice_2)
+slice_3 = vector1[:5] # first 5 items
+print(slice_3)
+
+# matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# print("Basic:\n", matrix)
+# element = matrix[1, 2]
+# print(f"\nItem in row 1, and column 2: {element}")
+# top_left = matrix[0, 0]
+# print(f"Item in row 0, and column 0: {top_left}")
+
+
+
 
 
 
