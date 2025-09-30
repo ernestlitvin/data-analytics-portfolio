@@ -160,12 +160,22 @@ print(slice_2)
 slice_3 = vector1[:5] # first 5 items
 print(slice_3)
 
-# matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-# print("Basic:\n", matrix)
-# element = matrix[1, 2]
-# print(f"\nItem in row 1, and column 2: {element}")
-# top_left = matrix[0, 0]
-# print(f"Item in row 0, and column 0: {top_left}")
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print("Basic:\n", matrix)
+element = matrix[1, 2]
+print(f"\nItem in row 1, and column 2: {element}")
+top_left = matrix[0, 0]
+print(f"Item in row 0, and column 0: {top_left}")
+print("Basic:\n", matrix)
+sub_matrix1 = matrix[0:2]
+print(f"\nFirst two rows:\n", sub_matrix1)
+sub_matrix2 = matrix[:, 1:3]
+print(f"\nRows 2 and 3:\n", sub_matrix2)
+row = matrix[1,:] # or just matrix[1]
+print(f"\nSecond row:\n", row)
+column = matrix[:,0]
+print(f"\nFirst column:\n", column)
+
 
 
 
