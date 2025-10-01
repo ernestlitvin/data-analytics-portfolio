@@ -248,3 +248,12 @@ print(f"\nExponent of arr:\n {np.exp(arr)}")
 print(f"\nSin:\n {np.sin(arr)}")
 # The list of such functions is huge: np.log(), np.abs(), np.cos() and many others.
 # You don’t need to write cycles, NumPy does all the dirty work for you, and it does it lightning fast.
+### tasks ###
+# 1
+prices_usd = np.array([10, 25, 50, 75, 100])
+eur_rate = np.array (0.85)
+prices_eur = prices_usd * eur_rate
+print(f"\nEuro prices:\n {prices_eur}")
+# 2
+heights_m = np.array([1.75, 1.80, 1.65, 1.90])
+weights_kg = np.array([70, 85, 60, 95])
