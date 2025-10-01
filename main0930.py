@@ -225,4 +225,21 @@ print(f"\nCheckboard:\n", checkboard)
 matrix_copy = matrix.copy()
 matrix_copy[3:, 3:] = 99
 print(f"\nMatrix copy with edited corner:\n", matrix_copy)
+######### basic functions ###############
+arr1 = np.array([10,20,30,40])
+arr2 = np.array([1,2,3,4])
+sum_arr = arr1 + arr2
+print(f"\nSum of arrays:\n", sum_arr)
+diff_arr = arr1 - arr2
+print(f"\nDifference of arrays:\n", diff_arr)
+prod_arr = arr1 * arr2
+print(f"\nProduct of arrays:\n", prod_arr)
+div_arr = arr1 / arr2
+print(f"\nDivision of arrays:\n", div_arr)
+print(arr2 * 2)
+print(arr2 ** 2)
+
+
+
+
 
