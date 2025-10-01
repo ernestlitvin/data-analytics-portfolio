@@ -251,9 +251,16 @@ print(f"\nSin:\n {np.sin(arr)}")
 ### tasks ###
 # 1
 prices_usd = np.array([10, 25, 50, 75, 100])
-eur_rate = np.array (0.85)
+eur_rate = 0.85
 prices_eur = prices_usd * eur_rate
 print(f"\nEuro prices:\n {prices_eur}")
 # 2
 heights_m = np.array([1.75, 1.80, 1.65, 1.90])
 weights_kg = np.array([70, 85, 60, 95])
+bmi = weights_kg / (heights_m ** 2)
+print(f"\nBMI :\n", bmi)
+# 3
+x_coords = np.array([1, 2, 3])
+y_coords = np.array([2, 3, 4])
+vect = np.sqrt((x_coords ** 2) + (y_coords ** 2))
+print(f"\nDISTANCE:\n {vect}")
