@@ -264,3 +264,39 @@ x_coords = np.array([1, 2, 3])
 y_coords = np.array([2, 3, 4])
 vect = np.sqrt((x_coords ** 2) + (y_coords ** 2))
 print(f"\nDISTANCE:\n {vect}")
+#########
+arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+print(f"\nSum:\n {np.sum(arr)}") ## or arr.sum()
+print(f"\nMean:\n {np.mean(arr)}") ## or arr.mean()
+print(f"\nMax:\n {np.max(arr)}") ## or arr.max()
+print(f"\nMin:\n {np.min(arr)}") ## or arr.min()
+print(f"\nStandard deviation:\n {np.std(arr)}") ## or arr.std()
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+print(f"\nMatrix:\n", matrix)
+# all element sum of matrix
+print(f"Sum: {matrix.sum()}")
+sum_col = matrix.sum(axis=0) # up->down
+print(f"\nSum of columns:\n", sum_col)
+sum_row = matrix.sum(axis=1) # left->right
+print(f"\nSum of rows:\n", sum_row)
+### tasks ###
+grades = np.array([
+    [8, 9, 7, 10], # 1st student grades
+    [6, 8, 8, 7],  # 2nd student grades
+    [9, 9, 10, 9]  # 3rd student grades
+])
+print(f"\nGrades:\n", grades)
+# 1
+avg_grade = np.mean(grades)
+print(f"\nAverage grade:\n", avg_grade)
+# 2
+st_avg_grade = grades.mean(axis=1)
+print(f"\nStudent average grade:\n", st_avg_grade)
+# 3
+ex_avg_grade = grades.mean(axis=0)
+print(f"\nExam average grade:\n", ex_avg_grade)
+# 4
+sec_col_grades = grades[:, 1]
+print(f"\n2nd column grades:\n", sec_col_grades)
+max_grade = sec_col_grades.max()
+print(f"\nMax grade:\n", max_grade)
