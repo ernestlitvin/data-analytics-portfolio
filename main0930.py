@@ -238,8 +238,13 @@ div_arr = arr1 / arr2
 print(f"\nDivision of arrays:\n", div_arr)
 print(arr2 * 2)
 print(arr2 ** 2)
-
-
-
-
-
+### universal functions "ufuncs" ###
+arr = np.array([1,4,9,16])
+# Calculate the square root of each element
+print(f"\nSquare root of arr:\n {np.sqrt(arr)}")
+# Calculate the exponent for each element (e^x)
+print(f"\nExponent of arr:\n {np.exp(arr)}")
+# Calculate sin for each element
+print(f"\nSin:\n {np.sin(arr)}")
+# The list of such functions is huge: np.log(), np.abs(), np.cos() and many others.
+# You don’t need to write cycles, NumPy does all the dirty work for you, and it does it lightning fast.
